@@ -70,10 +70,11 @@ function createMessage(text, name, domain, req, res, follower) {
 
   let noteMessage = {
     'id': `https://${domain}/m/${guidNote}`,
-    'type': 'Note',
+    'type': 'Article',
     'published': d.toISOString(),
     'attributedTo': `https://${domain}/u/${name}`,
     'content': text,
+    'summary': 'This is a summary or content warning',
     'to': ['https://www.w3.org/ns/activitystreams#Public'],
   };
 
